@@ -6,8 +6,8 @@
 /.idea
 /.vagrant
 _ide_helper.php
-public/css
-public/js
+public/css/
+public/js/
 storage/framework/views/
 storage/logs/
 Homestead.yaml
