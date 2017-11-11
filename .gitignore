@@ -5,7 +5,11 @@
 /vendor
 /.idea
 /.vagrant
-Homestead.json
+_ide_helper.php
+public/css
+public/js
+storage/framework/views/
+storage/logs/
 Homestead.yaml
 npm-debug.log
 yarn-error.log

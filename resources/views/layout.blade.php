@@ -2,13 +2,15 @@
 <html>
 <head>
   <base href="{{ url('/') }}"/>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  @yield('css')
 </head>
 <body>
 <div id="wrapper_all">
-  <div id="wrapper">
+  <div class="wrapper" id="app">
     <header>
       <div class="container all">
         <div class="logo">
@@ -87,6 +89,10 @@
     </div>
   </footer>
 </div>
+
+<script src="{{asset('js/app.js')}}"></script>
+@yield('scripts')
+
 </body>
 
 </html>

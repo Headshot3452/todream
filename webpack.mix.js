@@ -12,6 +12,9 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/style.scss', 'public/css');
+   .js('resources/assets/js/bootstrap.js', 'public/js')
+   .copy('node_modules/swiper/dist/js/swiper.min.js', 'public/js')
+   .sass('resources/assets/sass/style.scss', 'public/css')
+   .copy('node_modules/swiper/dist/css/swiper.min.css', 'public/css');
 
 mix.copyDirectory('resources/assets/img', 'public/img');
