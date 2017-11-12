@@ -4,8 +4,11 @@
   <base href="{{ url('/') }}"/>
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="description" content="{{ $meta['description'] ?? '' }}">
+  <meta name="Keywords" content="{{ $meta['keywords'] ?? '' }}">
   <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <title>{{ $meta['title'] ?? '' }}</title>
   @yield('css')
 </head>
 <body>
@@ -23,7 +26,7 @@
         </div>
         <div class="search_container">
           <input type="text" name="search" id="search" placeholder="Поиск"><span class="glyphicon glyphicon-search"></span>
-          <p>Образование, которое ценится повсюду!</p>
+          <p>{{ setting('site.descriptionTop') }}</p>
         </div>
         <div class="clearfix"></div>
         <nav class="navbar navbar-default" role="navigation">
@@ -42,59 +45,56 @@
         </nav>
       </div>
     </header>
-
     <div class="content">
       @yield('content')
     </div>
-
     <div class="clearfix"></div>
   </div>
-
   <footer>
     <div class="col-xs-3 text">
-      Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого
-      отношения к обитателям водоемов. Используется он
+      <img src="storage/{{ setting('site.logoFooter') }}" alt="">
+      <div class="clearfix"></div>
+      {{ setting('site.descriptionBottom') }}
     </div>
-    <div class="col-xs-2 menu">
+    <div class="col-xs-3 menu right">
       <h4>Меню</h4>
-		<?php
-		if (isset($FOOTER_MENU[0])) {
-			foreach ($FOOTER_MENU as $footer_menu) {
-				echo '<li><a href="' . $footer_menu['url'] . '">' . $footer_menu['title'] . '</a></li>';
-			}
-		}
-		?>
+      {{ menu('footer') }}
     </div>
-    <div class="col-xs-3 kont">
+    <div class="col-xs-3 kont left">
       <h4>Контакты</h4>
+      <i class="glyphicon glyphicon-map-marker"></i><span>{{ setting('site.address') }}</span><br />
+      <i class="glyphicon glyphicon-phone"></i><span>{{ setting('site.phone') }}</span><br />
+      <i class="glyphicon glyphicon-envelope"></i><span>{{ setting('site.email') }}</span>
     </div>
-    <div class="col-xs-3">
+    <div class="col-xs-3 xls">
       <h4>Прайсы</h4>
-      <a class="download price" href="">Скачать прайс</a>
+      <a class="download price" href="">
+        <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+        Скачать прайс
+      </a>
     </div>
     <div class="col-xs-1">
-      <a class="up" href=""></a>
+      <a class="up" href=""><i class="fa fa-angle-up" aria-hidden="true"></i></a>
     </div>
-
     <div id="info">
       <div class="copyright">
-        © Тибет, <?php echo date("Y");?> <br/>
+        {{ setting('site.name') }}, {{ date("Y") }} <br/>
         Все права защищены
-      </div>
-      <div class="iwl_cont">
-        <a href="http://www.iwl.by/">Разработка</a> и
-        <a href="http://www.iwl.by/">продвижение</a><a href="http://www.iwl.by/" class="iwl">IWL.by</a><br/>
-        <a href="http://www.iwl.by/">Хостинг</a>
       </div>
     </div>
   </footer>
 </div>
 
 <script src="{{asset('js/app.js')}}"></script>
+<script>
+  $('.up').on('click', function() {
+      $('body,html').animate({scrollTop:0},500);
+      return false;
+  });
+</script>
 @yield('scripts')
 
 </body>
-
 </html>
 
 {{--<!-- ЗАПИСЬ НА КУРСЫ -->--}}

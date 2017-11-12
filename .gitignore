@@ -8,7 +8,9 @@
 _ide_helper.php
 public/css/
 public/js/
+public/fonts/
 storage/framework/views/
+storage/app/public/
 storage/logs/
 Homestead.yaml
 npm-debug.log

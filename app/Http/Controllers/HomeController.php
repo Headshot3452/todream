@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use App\Models\Specialty;
+use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
 {
@@ -11,7 +12,14 @@ class HomeController extends Controller
     {
         $banners = Banner::where('status', 1)->get();
         $specialties = Specialty::where('status', 1)->get();
+        $page = Page::whereSlug('home')->first();
 
-        return view('welcome', compact('banners', 'specialties'));
+        $meta = [
+            'title' => $page->meta_title,
+            'description' => $page->meta_description,
+            'keywords' => $page->meta_keywords,
+        ];
+
+        return view('welcome', compact('banners', 'specialties', 'page', 'meta'));
     }
 }
