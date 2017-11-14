@@ -3,6 +3,9 @@
 /public/storage
 /public/js
 /public/css
+/public/images
+/public/fonts
+_ide_helper.php
 /storage/*.key
 /vendor
 /.idea

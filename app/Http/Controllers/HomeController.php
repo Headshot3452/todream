@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Banner;
-use App\Models\Specialty;
 use TCG\Voyager\Models\Page;
+use TCG\Voyager\Models\Post;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $banners = Banner::where('status', 1)->get();
-//        $specialties = Specialty::where('status', 1)->get();
+        $banners = Banner::whereStatus(1)->get();
+        $specialties = Post::whereStatus(1)->get();
         $page = Page::whereSlug('home')->first();
 
-        $meta = $this->getMetaTags($page);
+        $meta = (!empty($page)) ? $this->getMetaTags($page) : [];
 
-        return view('test', compact('banners', 'page', 'meta'));
+        return view('welcome', compact('banners', 'specialties', 'page', 'meta'));
     }
 
     public function about()
