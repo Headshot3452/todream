@@ -12,6 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+    .copy('resources/assets/fonts', 'public/fonts')
     .js('resources/assets/js/bootstrap.js', 'public/js')
     .copy('node_modules/swiper/dist/js/swiper.min.js', 'public/js')
     .sass('resources/assets/sass/style.scss', 'public/css')

@@ -6,7 +6,7 @@
       <img src="storage/{{ $page->image_above }}" alt="">
     @endif
 
-    <h2 class="title">{{ $page->excerpt }}</h2>
+    <h1 class="title">{{ $page->title }}</h1>
     <div class="col-lg-10 col-lg-offset-1 text">{!! $page->body !!}</div>
 
     @if ($page->image_below)

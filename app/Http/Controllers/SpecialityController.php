@@ -20,12 +20,12 @@ class SpecialityController extends Controller
             return redirect()->route('speciality', ['name' => $specialties->first()->slug]);
         }
 
-        $currentSpecialty = Post::active()->whereSlug($name)->get();
+        $currentSpecialty = Post::active()->whereSlug($name)->first();
         if (empty($currentSpecialty)) {
             abort(404);
         }
         $page = MenuItem::where('url', 'training-courses')->first();
 
-        return view('speciality', compact('currentSpecialty', 'specialties', 'page'));
+        return view('speciality', compact('currentSpecialty', 'specialties', 'page', 'name'));
     }
 }

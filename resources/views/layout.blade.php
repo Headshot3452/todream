@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="wrapper_all">
-  <div class="wrapper">
+  <div class="wrapper" id="app">
     <header>
       <div class="container all">
         <div class="logo">
