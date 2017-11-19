@@ -69,6 +69,8 @@ h1.title {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -120,12 +122,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .white_btn:hover, .white_btn:active, .white_btn:focus {
   color: #1f1f1f;
-}
-
-.title {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 25px;
 }
 
 /*
@@ -490,6 +486,9 @@ header .row nav .navbar-collapse {
     background-color: #662b00;
     color: #fff;
   }
+  .courses {
+    margin-bottom: 10px;
+  }
 }
 #call_block {
   padding-top: 25px;
@@ -502,9 +501,15 @@ header .row nav .navbar-collapse {
   a {
     font-size: 12px;
     color: #fff;
-    width: 100%;
+    line-height: 30px;
+    border-radius: 10px;
+    width: 90%;
     text-align: center;
+    margin-top: 25px;
     background-color: $orange;
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 
@@ -672,192 +677,103 @@ header .row nav .navbar-collapse {
     top: 155px;
   }
 
-  /*
-   ======================================================================
+/*
+ ======================================================================
 
-                                   ПАГИНАЦИЯ
+                                Contacts
 
-   ======================================================================
-  */
-  #pagination {
-    font-family: 'latoheavy';
-    margin: 0;
-  }
-  #pagination .pagination {
-    margin: 0 15px 0 0;
-  }
-  #pagination .pagination .first a {
-    background: url("/images/pagination.png") no-repeat;
-    background-position: 10px 8px;
-    height: 18px;
-  }
-  #pagination .pagination .first a:hover {
-    background-position: 10px -11px;
-  }
-  #pagination .pagination .last a {
-    background: url("/images/pagination.png") no-repeat;
-    transform: rotate(180deg);
-    background-position: 10px 1px;
-    height: 18px;
-  }
-  #pagination .pagination .last a:hover {
-    background-position: 10px -18px;
-  }
-  #pagination li a {
-    font-family: 'latoheavy';
-    background-color: transparent;
-    border: none;
-    color: #7b7b7b;
-    font-size: 13px;
-  }
-  #pagination li a:hover {
-    color: #ff6c00;
-    text-decoration: none;
-  }
-  #pagination li.active a {
-    background-color: transparent;
-    border: none;
-    color: #ff6c00;
-  }
-  #pagination .prev a,
-  #pagination .next a {
-    background-image: url("/images/pagination_one.png");
-    width: 7px;
-    height: 14px;
-    margin-top: 8px;
-    background-repeat: no-repeat;
-    background-position: 70% 0%;
-  }
-  #pagination .prev a:hover,
-  #pagination .next a:hover {
-    background-position: 70% 135%;
-  }
-  #pagination .next a {
-    background-position: 70% -30%;
-    transform: rotate(180deg);
-  }
-  #pagination .next a:hover {
-    background-position: 70% 105%;
-  }
-  /*
-   ======================================================================
+ ======================================================================
+*/
 
-                                  КОНТАКТЫ
-
-   ======================================================================
-  */
-  .kontakty {
-    font-size: 14px;
+.contacts {
+  h1 {
+    text-transform: none;
+    margin-top: 0;
   }
-  .kontakty h1 {
-    margin-bottom: 20px;
-  }
-  .kontakty .right div.map {
-    float: none;
-    height: 300px;
-    background-color: #bfd;
-    margin-bottom: 25px;
+  #map {
     width: 100%;
+    margin-bottom: 30px;
   }
-  .kontakty .right div.fl {
+  .info {
     float: left;
-    margin-right: 60px;
-    margin-bottom: 25px;
+    margin-right: 10%;
+    font-size: 14px;
+    i {
+      color: #8f8f8f;
+      margin-right: 10px;
+    }
+    span {
+      color: #8f8f8f;
+    }
+    div {
+      margin-top: 5px;
+    }
+    a {
+      i {
+        color: #202020;
+      }
+    }
   }
-  .kontakty .right div.soc {
-    margin-right: 0;
+  .feedback {
+    margin-top: 25px;
+    h3 {
+      color: #fff;
+      background-color: $orange;
+      line-height: 50px;
+      text-align: center;
+      font-size: 26px;
+    }
+    i {
+      margin-right: 5px;
+    }
+    #feedback-form {
+      padding-top: 30px;
+      height: 260px;
+      background-size: cover;
+      background-image: url("../img/feedback-background.jpg");
+      label {
+        display: none;
+      }
+      input, select, textarea {
+        border: 2px solid #ccc37d;
+        border-radius: 5px;
+      }
+      input {
+        margin-bottom: 20px;
+      }
+      textarea {
+        padding-left: 12px;
+        padding-top: 12px;
+        width: 100%;
+        resize: none;
+        height: 148px;
+      }
+      button {
+        color: #fff;
+        background-color: $orange;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 10px;
+        width: 110px;
+        display: block;
+        outline: none;
+        margin: 10px auto;
+        &:hover, &:active {
+          opacity: .8;
+        }
+      }
+    }
   }
-  .kontakty .right div span:first-child {
-    color: #1f1f1f;
-    font-family: 'latobold';
-    opacity: 0.5;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-  .kontakty .right div.address {
-    background: url("/images/address.png") no-repeat;
-  }
-  .kontakty .right div.phone {
-    background: url("/images/phone.png") no-repeat;
-  }
-  .kontakty .right div.email {
-    background: url("/images/mail.png") no-repeat;
-    padding-left: 5px;
-  }
-  .kontakty .right div.soc {
-    background: url("/images/soc.png") no-repeat;
-    padding-left: 5px;
-  }
-  .kontakty .right .call {
-    color: #fff;
-    background: linear-gradient(to right, #28627b, #537987);
-  }
-  .kontakty .right .call h2 {
-    line-height: 53px;
-    background: linear-gradient(to right, #28627b, #537987);
-    background: url("/images/letter.png") no-repeat 34% 46%;
-    text-align: center;
-  }
-  .kontakty .right .form_container {
-    padding: 30px 20px 22px;
-  }
-  #form_call_back,
-  #form_kurs {
-    position: relative;
-  }
-  #form_call_back input,
-  #form_kurs input,
-  #form_call_back select,
-  #form_kurs select,
-  #form_call_back textarea,
-  #form_kurs textarea {
-    font-size: 16px;
-  }
-  #form_call_back input,
-  #form_kurs input,
-  #form_call_back select,
-  #form_kurs select {
-    color: #1f1f1f;
-    margin-bottom: 20px;
-    width: 351px;
-    height: 33px;
-    border-radius: 10px;
-    outline: none;
-  }
-  #form_call_back textarea,
-  #form_kurs textarea {
-    padding-left: 12px;
-    color: #1f1f1f;
-    padding-top: 10px;
-    width: 440px;
-    height: 140px;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    margin-left: -440px;
-    outline: none;
-  }
-  #form_call_back select,
-  #form_kurs select {
-    padding-left: 12px;
-  }
-  .opacity_btn {
-    background-color: transparent;
-    margin-left: 300px;
-    color: #fff;
-    border: 3px solid #fff;
-    padding: 8px 73px;
-    font-size: 16px;
-    border-radius: 6px;
-  }
-  /*
-   ======================================================================
+}
 
-                                  МОДАЛКИ
+/*
+ ======================================================================
 
-   ======================================================================
-  */
+                                Modals
+
+ ======================================================================
+*/
   #modal_in_trash_ok .close,
   #modal_kurs .close,
   #modal_kurs_ok .close {

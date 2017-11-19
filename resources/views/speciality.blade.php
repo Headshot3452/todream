@@ -17,7 +17,7 @@
         <div class="left_menu">
           <h3>{{ $page->title }}</h3>
           <span id="green_block"></span>
-          <div class="pokupatelyam">
+          <div class="courses">
             @foreach ($specialties as $specialty)
               <h5 class="@if ($name == $specialty->slug) active @endif">
                 <a href="/training-courses/{{ $specialty->slug }}">{{ $specialty->title }}</a>

@@ -1,6 +1,16 @@
 @extends('layout')
 
 @section('content')
+  <div id="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <span>
+          <a href="/">Главная</a> <span class="breadcrumbs_arrow"></span>
+        </span>
+        <span>{{ $page->title }}</span>
+      </div>
+    </div>
+  </div>
   <div class="container all">
     @if ($page->image_above)
       <img src="storage/{{ $page->image_above }}" alt="">

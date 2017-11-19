@@ -28,6 +28,11 @@ class HomeController extends Controller
         return view('text', compact('page', 'meta'));
     }
 
+    public function contacts()
+    {
+        return view('contacts');
+    }
+
     /**
      * @param Page $page
      *
