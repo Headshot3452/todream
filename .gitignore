@@ -5,7 +5,7 @@
 /public/css/
 /public/images
 /public/fonts
-storage/logs/
+/storage/logs/
 _ide_helper.php
 /storage/*.key
 /vendor

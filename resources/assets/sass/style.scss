@@ -544,106 +544,44 @@ header .row nav .navbar-collapse {
     color: #fff;
   }
 
-  /*
-   ======================================================================
+/*
+ ======================================================================
 
-                                  КУРС ПСИХОЛОГИИ
+                                Reviews
 
-   ======================================================================
-  */
-  #kurs_psihologii h3,
-  #kurs_iogi h3 {
-    color: #fff;
-    font-size: 18px;
-    position: absolute;
-    z-index: 100;
-    background: url("/images/psihology.png") no-repeat 66px 0;
-    top: 50px;
-    padding-left: 100px;
-  }
-  #kurs_psihologii .img_cont,
-  #kurs_iogi .img_cont {
-    height: 275px;
-    overflow: hidden;
-    position: relative;
-  }
-  #kurs_psihologii .img_cont #opacity_block,
-  #kurs_iogi .img_cont #opacity_block {
-    width: 311px;
-    top: 0;
-    left: 0;
-    height: 100%;
-  }
-  #kurs_psihologii .img_cont #opacity_block div,
-  #kurs_iogi .img_cont #opacity_block div {
-    background-color: #000;
-    width: 311px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    opacity: 0.56;
-  }
-  #kurs_psihologii .img_cont #opacity_block p,
-  #kurs_iogi .img_cont #opacity_block p {
-    padding: 0 40px;
-    text-align: center;
-    z-index: 100;
-    color: #fff;
-    position: absolute;
-    top: 100px;
-    width: 311px;
-  }
-  #kurs_psihologii .img_cont #opacity_block a.opacity_btn,
-  #kurs_iogi .img_cont #opacity_block a.opacity_btn {
-    position: absolute;
-    top: 190px;
-    margin-left: 40px;
-    left: 0;
-    z-index: 100;
-    padding: 8px 36px;
-  }
-  #kurs_psihologii .img_cont #opacity_block a.opacity_btn:hover,
-  #kurs_iogi .img_cont #opacity_block a.opacity_btn:hover,
-  #kurs_psihologii .img_cont #opacity_block a.opacity_btn:focus,
-  #kurs_iogi .img_cont #opacity_block a.opacity_btn:focus,
-  #kurs_psihologii .img_cont #opacity_block a.opacity_btn:active,
-  #kurs_iogi .img_cont #opacity_block a.opacity_btn:active {
-    color: #fff;
-  }
-  #kurs_iogi h3 {
-    background: url("/images/kurs_ioga.png") no-repeat 66px 0;
-  }
-  /*
-   ======================================================================
+ ======================================================================
+*/
 
-                                  ОТЗЫВЫ
-
-   ======================================================================
-  */
-  .rewiew h1 {
+.review {
+  h1 {
     margin-bottom: 20px;
+    margin-top: 0;
+    text-transform: none;
+    text-align: left;
   }
-  .rewiew .title {
+  span.title {
     font-size: 16px;
     margin-bottom: 0;
+    margin-top: 0;
+    text-transform: none;
   }
-  .rewiew .date {
+  .date {
     color: #aaa;
     font-size: 12px;
     margin: 4px 0;
   }
-  .rewiew .text {
+  .text {
     color: #3b4340;
     font-size: 14px;
   }
-  .rewiew .inner h3 {
+  .inner h3 {
     color: #fff;
     padding-left: 83px;
     line-height: 47px;
     background: #d5d5d5 url("/images/review.png") no-repeat 45px 50%;
     margin-bottom: 22px;
   }
+}
   .rewiew .inner input,
   .rewiew .inner textarea {
     color: #d5d5d5;
@@ -774,6 +712,7 @@ header .row nav .navbar-collapse {
 
  ======================================================================
 */
+
   #modal_in_trash_ok .close,
   #modal_kurs .close,
   #modal_kurs_ok .close {

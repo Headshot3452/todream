@@ -29,6 +29,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\App\Banner withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\App\Banner withoutTrashed()
  * @mixin \Eloquent
+ * @method static bool|null forceDelete()
  */
 class Banner extends Model
 {

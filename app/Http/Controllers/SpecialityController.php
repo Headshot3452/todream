@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use TCG\Voyager\Models\MenuItem;
-use TCG\Voyager\Models\Page;
 use TCG\Voyager\Models\Post;
 
 class SpecialityController extends Controller
