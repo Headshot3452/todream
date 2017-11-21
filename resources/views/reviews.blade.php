@@ -15,25 +15,28 @@
   <div class="container review">
     <div class="row">
       <h1 class="title">Отзывы</h1>
-      <div class="col-xs-9 left">
+      <div class="col-xs-8 left">
         @foreach ($reviews as $review)
           <span class="title">{{ $review->name }}</span><br/>
           <span class="date">{{ Carbon\Carbon::parse($review->created_at)->formatLocalized('%d %B %Y') }};</span>
           <p class="text">{{ $review->description }}</p>
         @endforeach
       </div>
-      <div class="inner col-xs-3 right">
-        <div class="send_r">
-          <h3>Оставить отзыв</h3>
-          <form id="send_rev">
-            <input class=" col-xs-12" type="text" name="name" id="name" placeholder="Ваше имя">
-            <input class="col-xs-12" type="text" name="email" id="email" placeholder="Ваш E-mail">
-            <textarea class="col-xs-12" name="review" id="review" placeholder="Ваш отзыв"></textarea>
-            <div class="clearfix"></div>
-            <div class="send_container"><a class="red_btn">Отправить</a></div>
-          </form>
-          <div class="clearfix"></div>
-        </div>
+      <div class="inner col-lg-4 right">
+        <h3><i class="fa fa-pencil" aria-hidden="true"></i>Оставить отзыв</h3>
+        <form id="review-form" method="post">
+          {{ csrf_field() }}
+          <div class="form-group">
+            <input type="text" name="name" id="name" class="form-control" required placeholder="Ваше имя">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" class="form-control" required placeholder="Ваш e-mail">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="description" id="description" required placeholder="Ваш отзыв"></textarea>
+          </div>
+          <button type="submit" class="btn">Оставить отзыв</button>
+        </form>
       </div>
     </div>
   </div>

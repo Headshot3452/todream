@@ -33,5 +33,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Review extends Model
 {
     use SoftDeletes;
+
+    protected $fillable = ['name', 'email', 'description'];
     protected $dates = ['deleted_at'];
 }

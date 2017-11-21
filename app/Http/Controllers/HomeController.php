@@ -32,18 +32,4 @@ class HomeController extends Controller
     {
         return view('contacts');
     }
-
-    /**
-     * @param Page $page
-     *
-     * @return array
-     */
-    private function getMetaTags(Page $page): array
-    {
-        return [
-            'title' => $page->meta_title,
-            'description' => $page->meta_description,
-            'keywords' => $page->meta_keywords,
-        ];
-    }
 }

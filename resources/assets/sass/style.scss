@@ -574,12 +574,41 @@ header .row nav .navbar-collapse {
     color: #3b4340;
     font-size: 14px;
   }
-  .inner h3 {
-    color: #fff;
-    padding-left: 83px;
-    line-height: 47px;
-    background: #d5d5d5 url("/images/review.png") no-repeat 45px 50%;
-    margin-bottom: 22px;
+  .inner {
+    #review-form {
+      padding: 0 25px;
+      background-color: #f5f5f5;
+      input {
+        height: 42px;
+      }
+      textarea {
+        min-height: 250px;
+        resize: none;
+      }
+      button {
+        line-height: 46px;
+        font-size: 22px;
+        margin-top: 45px;
+        margin-bottom: 25px;
+        width: 100%;
+        background-color: $orange;
+        color: #fff;
+        &:hover, &:active {
+          opacity: .8;
+        }
+      }
+    }
+    h3 {
+      color: #fff;
+      background-color: $green-light;
+      text-align: center;
+      line-height: 47px;
+      font-size: 22px;
+      margin-bottom: 22px;
+    }
+    i {
+      margin-right: 5px;
+    }
   }
 }
   .rewiew .inner input,
