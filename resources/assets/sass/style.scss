@@ -742,20 +742,67 @@ header .row nav .navbar-collapse {
  ======================================================================
 */
 
-  #modal_in_trash_ok .close,
-  #modal_kurs .close,
-  #modal_kurs_ok .close {
+#modal {
+  .modal-dialog {
+    width: 365px;
+    border-radius: 10px;
+    margin-top: 90px;
+  }
+  .modal-header {
+    background-color: $green-light;
+    padding: 6px 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    h4 {
+      font-weight: 700;
+    }
+  }
+  textarea {
+    height: 95px;
+    resize: none;
+  }
+  form {
+    button {
+      background-color: $orange;
+      color: #fff;
+      width: 250px;
+      line-height: 41px;
+      font-size: 18px;
+      border-radius: 10px;
+      margin: 10px auto 0;
+      padding: 0;
+      display: block;
+    }
+  }
+  label {
+    font-size: 14px;
+    color: #a8a7a7;
+    font-weight: 700;
+  }
+  .modal-content {
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .close {
+    background-color: $orange;
+    color: #fff;
     opacity: 1;
-    width: 21px;
-    height: 21px;
-    margin-top: -36px;
-    margin-right: -50px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    span {
+      position: relative;
+      top: -2px;
+    }
+    &:hover {
+      opacity: .8;
+    }
   }
-  #modal_in_trash_ok .modal-dialog,
-  #modal_kurs .modal-dialog,
-  #modal_kurs_ok .modal-dialog {
-    margin-top: 245px;
-  }
+}
   #modal_in_trash_ok .modal-dialog .modal-content,
   #modal_kurs .modal-dialog .modal-content,
   #modal_kurs_ok .modal-dialog .modal-content {

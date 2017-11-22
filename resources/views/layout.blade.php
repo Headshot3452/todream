@@ -85,10 +85,46 @@
   </footer>
 </div>
 
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <form id="order-form" method="post" data-toggle="validator">
+          <div class="form-group">
+            <label for="name">Ваше имя*</label>
+            <input type="text" name="name" id="name" class="form-control" required placeholder="Иван">
+          </div>
+          <div class="form-group">
+            <label for="email">Адрес электронной почты</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="ivan@mail.ru">
+          </div>
+          <div class="form-group">
+            <label for="phone">Номер телефона*</label>
+            <input type="text" name="phone" id="phone" class="form-control" required placeholder="+375 (44) 222 22 22">
+          </div>
+          <div class="form-group">
+            <label for="message">Комментарий</label>
+            <textarea name="message" id="message" required placeholder="Комментарий" class="form-control"></textarea>
+          </div>
+          <button type="submit" class="btn">Позвоните мне</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="{{asset('js/app.js')}}"></script>
 <script>
   $('.up').on('click', function() {
       $('body,html').animate({scrollTop:0}, 500);
+      return false;
+  });
+  $('.modal-call').on('click', function () {
+      $('#modal').modal('show');
       return false;
   });
 </script>
@@ -97,34 +133,6 @@
 </body>
 </html>
 
-{{--<!-- ЗАПИСЬ НА КУРСЫ -->--}}
-
-{{--<div class="modal fade" id="modal_kurs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">--}}
-{{--<div class="modal-dialog">--}}
-{{--<div class="modal-content">--}}
-{{--<div class="modal-header">--}}
-{{--<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>--}}
-{{--<h4 class="modal-title" id="myModalLabel">Запись на курсы</h4>--}}
-{{--<div class="clearfix"></div>--}}
-{{--</div>--}}
-{{--<div class="modal-body">--}}
-{{--<form id="form_kurs">--}}
-{{--<input type="text" id="name" name="name" placeholder="Имя*" required /><br/>--}}
-{{--<input type="text" id="phone" name="phone" placeholder="Телефон*" required /><br/>--}}
-{{--<input type="email" id="email" name="email" placeholder="Ваш e-mail" /><br/>--}}
-{{--<input type="hidden" name="kurs" value="1" id="kurs" />--}}
-{{--<textarea placeholder="Комментарий" id="text" name="text"></textarea>--}}
-{{--<div class="clearfix"></div>--}}
-
-{{--<button type="submit" class="send red_btn">Записаться</button>--}}
-
-{{--</form>--}}
-{{--</div>--}}
-{{--<div class="modal-footer">--}}
-{{--</div>--}}
-{{--</div>--}}
-{{--</div>--}}
-{{--</div>--}}
 
 {{--<!-- ЗАЯВКА ПРИНЯТА -->--}}
 
