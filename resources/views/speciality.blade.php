@@ -42,7 +42,9 @@
           <div id="text-block">
             <h3>{{ $currentSpecialty->title }}</h3>
             <div>{{ $currentSpecialty->excerpt }}</div>
-            <a href="" data-id="{{ $currentSpecialty->id }}">Записаться на курсы</a>
+            <a href="" class="modal-course" data-id="{{ $currentSpecialty->id }}" data-title="{{ $currentSpecialty->title }}">
+              Записаться на курсы
+            </a>
           </div>
           <img src="/storage/{{ $currentSpecialty->catalog_image }}">
           <div class="clearfix"></div>

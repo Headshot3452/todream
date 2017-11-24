@@ -1,10 +1,11 @@
 <?php
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about');
 Route::get('/contacts', 'HomeController@contacts');
 Route::get('/reviews', 'ReviewController@list')->name('reviews');
 Route::post('/reviews', 'ReviewController@store');
+Route::post('/orders', 'OrderController@store')->name('orders');
 
 Route::get('/training-courses/{name?}', 'SpecialityController@index')->name('speciality');
 

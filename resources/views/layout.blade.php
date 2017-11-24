@@ -93,10 +93,16 @@
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        <form id="order-form" method="post" data-toggle="validator">
+        <form id="order-form" method="post" data-toggle="validator" action="{{ route('orders') }}">
+          {{ csrf_field() }}
+          <input type="hidden" name="post_id" id="post_id" class="form-control">
           <div class="form-group">
             <label for="name">Ваше имя*</label>
             <input type="text" name="name" id="name" class="form-control" required placeholder="Иван">
+          </div>
+          <div class="form-group hide">
+            <label for="name">Специальность для изучения</label>
+            <input type="text" name="title" id="title" class="form-control" readonly>
           </div>
           <div class="form-group">
             <label for="email">Адрес электронной почты</label>
@@ -104,11 +110,11 @@
           </div>
           <div class="form-group">
             <label for="phone">Номер телефона*</label>
-            <input type="text" name="phone" id="phone" class="form-control" required placeholder="+375 (44) 222 22 22">
+            <input type="text" name="phone" id="phone" class="form-control numbers-only" required placeholder="+375 (44) 222 22 22">
           </div>
           <div class="form-group">
-            <label for="message">Комментарий</label>
-            <textarea name="message" id="message" required placeholder="Комментарий" class="form-control"></textarea>
+            <label for="comment">Комментарий</label>
+            <textarea name="comment" id="comment" placeholder="Комментарий" class="form-control"></textarea>
           </div>
           <button type="submit" class="btn">Позвоните мне</button>
         </form>
@@ -118,16 +124,8 @@
 </div>
 
 <script src="{{asset('js/app.js')}}"></script>
-<script>
-  $('.up').on('click', function() {
-      $('body,html').animate({scrollTop:0}, 500);
-      return false;
-  });
-  $('.modal-call').on('click', function () {
-      $('#modal').modal('show');
-      return false;
-  });
-</script>
+<script src="{{asset('js/jquery.mask.min.js')}}"></script>
+<script src="{{asset('js/scripts.js')}}"></script>
 @yield('scripts')
 
 </body>

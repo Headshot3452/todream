@@ -14,6 +14,8 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
     .copy('resources/assets/fonts', 'public/fonts')
     .js('resources/assets/js/bootstrap.js', 'public/js')
+    .js('resources/assets/js/scripts.js', 'public/js')
     .copy('node_modules/swiper/dist/js/swiper.min.js', 'public/js')
+    .copy('vendor/igorescobar/jquery-mask-plugin/dist/jquery.mask.min.js', 'public/js')
     .sass('resources/assets/sass/style.scss', 'public/css')
     .copy('node_modules/swiper/dist/css/swiper.min.css', 'public/css');

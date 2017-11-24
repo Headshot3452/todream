@@ -775,6 +775,9 @@ header .row nav .navbar-collapse {
       margin: 10px auto 0;
       padding: 0;
       display: block;
+      &:hover, &:active {
+        opacity: .8;
+      }
     }
   }
   label {
