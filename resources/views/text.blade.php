@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <span>
-          <a href="/">Главная</a> <span class="breadcrumbs_arrow"></span>
+          <a href="/">Главная</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
         </span>
         <span>{{ $page->title }}</span>
       </div>

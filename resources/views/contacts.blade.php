@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <span>
-          <a href="/">Главная</a> <span class="breadcrumbs_arrow"></span>
+          <a href="/">Главная</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i>
         </span>
         <span>Контакты</span>
       </div>
@@ -15,9 +15,8 @@
     <h1 class="title">Контакты</h1>
     <div class="col-lg-12">
       <div id="map">
-        <iframe width="100%" height="310" frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?q=якуба+коласа+55&key={{ env('GOOGLE_MAPS_KEY') }}"
-                allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.157086319902!2d27.540611115975302!3d53.9111844399528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf8da2b78327%3A0xbf4dce0e8fb8ae4a!2z0L_RgNC-0YHQvy4g0J_QvtCx0LXQtNC40YLQtdC70LXQuSAyMy8xLCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1511705291396"
+                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="info">
         <i class="glyphicon glyphicon-map-marker"></i><span>Адрес</span>

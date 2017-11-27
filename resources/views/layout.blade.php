@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="description" content="{{ $meta['description'] ?? '' }}">
   <meta name="Keywords" content="{{ $meta['keywords'] ?? '' }}">
+  <link rel="icon" type="image/png" href="/storage/{{ setting('admin.icon_image') }}">
   <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <title>{{ $meta['title'] ?? '' }}</title>
@@ -25,7 +26,10 @@
           переподготовки <span>”К МЕЧТЕ”</span>”
         </div>
         <div class="search_container">
-          <input type="text" name="search" id="search" placeholder="Поиск"><span class="glyphicon glyphicon-search"></span>
+          <div class="phone-header">
+            <i class="glyphicon glyphicon-phone"></i>{{ setting('site.phone') }}
+          </div>
+          {{--<input type="text" name="search" id="search" placeholder="Поиск"><span class="glyphicon glyphicon-search"></span>--}}
           <p>{{ setting('site.descriptionTop') }}</p>
         </div>
         <div class="clearfix"></div>
@@ -49,40 +53,40 @@
       @yield('content')
     </div>
     <div class="clearfix"></div>
-  </div>
-  <footer>
-    <div class="col-xs-3 text">
-      <img src="storage/{{ setting('site.logoFooter') }}" alt="">
-      <div class="clearfix"></div>
-      {{ setting('site.descriptionBottom') }}
-    </div>
-    <div class="col-xs-3 menu right">
-      <h4>Меню</h4>
-      {{ menu('footer') }}
-    </div>
-    <div class="col-xs-3 kont left">
-      <h4>Контакты</h4>
-      <i class="glyphicon glyphicon-map-marker"></i><span>{{ setting('site.address') }}</span><br />
-      <i class="glyphicon glyphicon-phone"></i><span>{{ setting('site.phone') }}</span><br />
-      <i class="glyphicon glyphicon-envelope"></i><span>{{ setting('site.email') }}</span>
-    </div>
-    <div class="col-xs-3 xls">
-      <h4>Прайсы</h4>
-      <a class="download price" href="">
-        <i class="fa fa-file-excel-o" aria-hidden="true"></i>
-        Скачать прайс
-      </a>
-    </div>
-    <div class="col-xs-1">
-      <a class="up" href=""><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-    </div>
-    <div id="info">
-      <div class="copyright">
-        {{ setting('site.name') }}, {{ date("Y") }} <br/>
-        Все права защищены
+    <footer>
+      <div class="col-xs-3 text">
+        <img src="storage/{{ setting('site.logoFooter') }}" alt="">
+        <div class="clearfix"></div>
+        {{ setting('site.descriptionBottom') }}
       </div>
-    </div>
-  </footer>
+      <div class="col-xs-3 menu right">
+        <h4>Меню</h4>
+        {{ menu('footer') }}
+      </div>
+      <div class="col-xs-3 kont left">
+        <h4>Контакты</h4>
+        <i class="glyphicon glyphicon-map-marker"></i><span>{{ setting('site.address') }}</span><br />
+        <i class="glyphicon glyphicon-phone"></i><span>{{ setting('site.phone') }}</span><br />
+        <i class="glyphicon glyphicon-envelope"></i><span>{{ setting('site.email') }}</span>
+      </div>
+      <div class="col-xs-3 xls">
+        <h4>Прайсы</h4>
+        <a class="download price" href="">
+          <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+          Скачать прайс
+        </a>
+      </div>
+      <div class="col-xs-1">
+        <a class="up" href=""><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+      </div>
+      <div id="info">
+        <div class="copyright">
+          {{ setting('site.name') }}, {{ date("Y") }} <br/>
+          Все права защищены
+        </div>
+      </div>
+    </footer>
+  </div>
 </div>
 
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

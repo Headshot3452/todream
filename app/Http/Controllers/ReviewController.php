@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ReviewRequest;
 use App\Review;
+use TCG\Voyager\Models\Page;
 
 class ReviewController extends Controller
 {
     public function list()
     {
         $reviews = Review::whereStatus(1)->orderBy('created_at', 'DESC')->get();
+        $page = Page::whereSlug('about')->first();
 
-        return view('reviews', compact('reviews'));
+        $meta = $this->getMetaTags($page);
+
+        return view('reviews', compact('reviews', 'meta'));
     }
 
     /**
